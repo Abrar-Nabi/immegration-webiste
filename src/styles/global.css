@@ -1,0 +1,28 @@
+/* Reset default styles for all elements */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  /* Set a clean base font */
+  body {
+    font-family: Arial, sans-serif;
+    line-height: 1.5;
+    background-color: #fff;
+    color: #000;
+  }
+  
+  /* Remove default styling from ordered/unordered lists */
+  ol, ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
+  
+  /* Reset anchor styles */
+  a {
+    text-decoration: none;
+    color: inherit;
+  }
+  

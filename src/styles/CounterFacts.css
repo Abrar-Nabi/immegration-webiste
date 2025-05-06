@@ -1,0 +1,99 @@
+
+
+/*** Counter Facts Start ***/
+.counter-facts {
+    background: linear-gradient(rgba(255, 255, 255, .9), rgba(255, 255, 255, 0.8)), url(../assets/img/breadcrumb.png);
+    background-size: cover;
+    background-attachment: fixed;
+    background-position: center center;
+    background-repeat: no-repeat;
+}
+.counter-facts .row {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+
+.counter-facts .counter {
+    position: relative;
+    text-align: center;
+    max-width: 200px;
+    width: 100%;
+    min-height: 215px;
+    padding: 10px 15px;
+    margin: 0 auto;
+    border-radius: 100px;
+    box-shadow: 0 8px 5px rgba(0, 0, 0, 0.2);
+    background: var(--bs-white);
+}
+
+.counter-facts .counter:before {
+    content: "";
+    position: absolute;
+    height: 105px;
+    width: 100%;
+    left: 0;
+    top: 0;
+    border-radius: 10px 10px 0 0;
+    background-color: var(--bs-primary);
+    
+}
+.counter-facts .counter .counter-icon {
+    position: relative;
+    width: 120px;
+    height: 100px;
+    margin: 0 auto 10px;
+    border-radius: 10px 10px 0 0;
+    transform: translateY(-20px);
+    font-size: 50px;
+    line-height: 90px;
+    color: var(--bs-secondary);
+    background: rgba(1, 143, 252, 0.5);
+    clip-path: polygon(0% 0%, 100% 0, 100% 70%, 50% 100%, 0 70%);
+}
+.counter-facts .counter .counter-icon:before {
+    content: "";
+    position: absolute;
+    width: 120px;
+    height: 90px;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    border-radius: 10px 10px 0 0;
+    background: rgba(0, 58, 102, 0.5);
+    z-index: -1;
+    clip-path: polygon(0% 0%, 100% 0, 100% 70%, 50% 100%, 0 70%);
+}
+.counter-facts .counter .counter-icon i,
+.counter-facts .counter .counter-icon svg:hover {
+    transform: rotate(360deg);
+    transition: all 0.3s ease;
+    
+}
+.counter-facts .counter h3 {
+    color: var(--bs-primary);
+    font-size: 17px;
+    font-weight: 600;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    margin: 0 0 5px 0;
+}
+.counter-facts .counter .counter-value {
+    font-size: 30px;
+    font-weight: 700;
+    display: block;
+    color: var(--bs-secondary);
+}
+
+.counter-facx   ts .counter .counter-icon i,
+.counter-facts .counter .counter-icon svg {
+   color: #fff;
+    transition: all 0.3s ease;
+}
+
+@media screen and (max-width: 1200px) {
+    .counter-facts .counter { margin-bottom: 40px; 
+    }
+}
+/*** Counter Facts End ***/
