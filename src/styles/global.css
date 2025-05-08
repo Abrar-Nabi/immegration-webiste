@@ -11,8 +11,10 @@
     line-height: 1.5;
     background-color: #fff;
     color: #000;
+    padding-top: 100px;
   }
-  
+
+
   /* Remove default styling from ordered/unordered lists */
   ol, ul {
     list-style: none;

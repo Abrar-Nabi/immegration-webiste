@@ -7,11 +7,18 @@
 
 /* Topbar styles */
 .topbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1000;
   background-color: #233555;
   color: #ddd;
   font-size: 0.9rem;
   padding: 0.5rem 1rem;
 }
+
+
 
 .topbar-container {
   display: flex;
@@ -34,15 +41,20 @@
 
 /* Navbar styles */
 .navbar-container {
-  background-color: white; /* White background */
-  border-bottom: 1px solid #ccc; /* Light border */
+  position: fixed;
+  top: 38px;
+  left: 0;
+  width: 100%;
+  background-color: white;
+  border-bottom: 1px solid #ccc;
+  z-index: 1000;
 }
 
 .navbar {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 1rem;
+  padding: 0rem 1rem;
   flex-wrap: wrap;
 }
 
@@ -51,6 +63,16 @@
   align-items: center;
   text-decoration: none;
 }
+
+/* Highlight the current active nav link */
+.nav-link.active {
+  color: #08449e;
+  font-weight: 600;
+  border-bottom: 2px solid #08449e;
+  background-color: transparent;
+}
+
+
 
 .navbar-brand img {
   height: 60px; /* Adjust logo size */
@@ -131,9 +153,15 @@
   }
 
   .topbar-left {
-    margin: 10px;
+   display: flex;
+   flex-direction: column;
+   text-align: center;
   }
-
+  .navbar-container {
+    
+    top: 50px;
+    
+}
   .navbar-toggle {
     display: block; /* Show hamburger icon on small screens */
   }
@@ -158,4 +186,6 @@
     position: static; /* Remove absolute position */
     box-shadow: none; /* Remove shadow on mobile */
   }
+
+
 }

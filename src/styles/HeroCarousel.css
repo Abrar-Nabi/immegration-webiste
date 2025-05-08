@@ -26,7 +26,7 @@
 .carousel-header .carousel .carousel-indicators li {
     width: 8px;
     height: 8px;
-    border: 8px solid var(--bs-primary);
+    border: 8px solid #d2b775;
     border-radius: 50%;
     margin-right: 30px;
     transition: 0.5s;
@@ -71,7 +71,10 @@
 }
 
 .hero-button{
-    background-color: #d2b775 !important;
+    background-color: #b08e40 !important;
+}
+.hero-button:hover{
+    background-color: #866c32!important;
 }
 @media (max-width: 768px) {
     .carousel-header {

@@ -1,0 +1,141 @@
+.footer {
+    background:#233555;
+    color: #ffffff;
+    padding: 60px 20px 40px;
+  }
+  
+  .footer-container {
+    max-width: 1200px;
+    margin: auto;
+  }
+  
+  .footer-row {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+  }
+  
+  .footer-col {
+    flex: 1 1 250px;
+  }
+  
+  .footer-item {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .footer-heading {
+    color: #9e9999;
+    margin-bottom: 20px;
+  }
+  
+  .footer-item a {
+    color: #fff;
+    margin: 5px 0;
+    text-decoration: none;
+    transition: 0.3s;
+  }
+  
+  .footer-item a:hover {
+    letter-spacing: 1px;
+    color: #b08e40;
+  }
+  
+  .footer-time h6 {
+    margin: 0;
+    color: #bbb;
+  }
+  
+  .footer-time p {
+    margin: 0 0 10px;
+  }
+  
+  .footer-social {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-top: 10px;
+  }
+  
+  .footer-social i {
+    font-size: 20px;
+    color: #fff;
+    cursor: pointer;
+    transition: color 0.3s;
+  }
+  
+  .footer-social i:hover {
+    color: #b08e40;
+  }
+  
+  .footer-desc {
+    margin: 10px 0 20px;
+    color: #eee;
+  }
+  
+  .newsletter {
+    display: flex;
+    position: relative;
+  }
+  
+  .newsletter input {
+    flex: 1;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 50px;
+    outline: none;
+  }
+  
+  .newsletter button {
+    position: absolute;
+    right: 5px;
+    top: 50%;
+    transform: translateY(-50%);
+    padding: 8px 16px;
+    background-color: #b08e40;
+    color: #000;
+    border: none;
+    border-radius: 50px;
+    cursor: pointer;
+  }
+  
+  .newsletter button:hover {
+    background-color: #b08e40;
+  }
+  
+  /* Copyright */
+  .copyright {
+    background-color: #242628;
+    color: #fff;
+    text-align: center;
+    padding: 20px 10px;
+    font-size: 14px;
+  }
+  
+  .copyright a {
+    color: #fff;
+  padding: 0px 2px;
+  }
+  
+  @media (max-width: 768px) {
+    .footer-row {
+      flex-direction: column;
+    }
+  
+    .newsletter {
+      flex-direction: column;
+      align-items: stretch;
+    }
+  
+    .newsletter input {
+      width: 100%;
+      margin-bottom: 10px;
+    }
+  
+    .newsletter button {
+      position: static;
+      transform: none;
+      width: 100%;
+    }
+  }
+  

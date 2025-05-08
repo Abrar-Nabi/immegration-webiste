@@ -1,0 +1,116 @@
+/* Container Setup */
+.contact {
+    padding: 60px 20px;
+    background: #f8f9fa;
+  }
+  
+  .container {
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+  
+  .section-title {
+    text-align: center;
+    margin-bottom: 40px;
+  }
+  
+  .sub-style {
+    margin-bottom: 10px;
+  }
+  
+  .sub-title {
+    display: inline-block;
+    padding: 5px 15px;
+    color: #007bff;
+    font-size: 18px;
+    border: 2px solid #007bff;
+    border-radius: 25px;
+  }
+  
+  .main-title {
+    font-size: 32px;
+    margin-bottom: 15px;
+  }
+  
+  .description {
+    max-width: 600px;
+    margin: 0 auto;
+    font-size: 16px;
+    color: #555;
+  }
+  
+  /* Grid Layout */
+  .office-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 30px;
+    justify-items: center;
+  }
+  
+  /* Office Card */
+  .office-item {
+    background: #fff;
+    border-radius: 10px;
+    text-align: center;
+    padding: 20px;
+    box-shadow: 0 0 45px rgba(0, 0, 0, 0.2);
+    transition: 0.5s ease;
+  }
+  
+  .office-item:hover {
+    box-shadow: 20px 20px 20px rgba(0, 58, 102, 0.3);
+  }
+  
+  /* Office Image */
+  .office-img {
+    overflow: hidden;
+    border-radius: 10px;
+    margin-bottom: 15px;
+  }
+  
+  .office-img img {
+    width: 100%;
+    transition: 0.5s ease;
+    border-radius: 10px;
+  }
+  
+  .office-item:hover .office-img img {
+    transform: scale(1.3);
+  }
+  
+  /* Content */
+  .office-content h4 {
+    margin-bottom: 10px;
+    font-size: 20px;
+    color: #222;
+  }
+  
+  .office-content a {
+    display: block;
+    margin-bottom: 10px;
+    font-size: 16px;
+    text-decoration: none;
+    transition: 0.3s;
+  }
+  
+  .office-content a.phone {
+    color: #6c757d;
+  }
+  
+  .office-content a.email {
+    color: #888;
+  }
+  
+  .office-content a.phone:hover {
+    color: #007bff;
+  }
+  
+  .office-content a.email:hover {
+    color: #6c757d;
+  }
+  
+  .office-content p {
+    font-size: 14px;
+    color: #444;
+  }
+  

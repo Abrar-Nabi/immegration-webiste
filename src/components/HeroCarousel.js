@@ -22,7 +22,7 @@ const HeroCarousel = () => {
                 <p className="text-white mb-4 mb-md-5 fs-5">
                   Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s,
                 </p>
-                <button className="btn btn-primary border-secondary rounded-pill text-white py-3 px-5">
+                <button className="hero-button btn btn-primary border-secondary rounded-pill text-white py-3 px-5">
                   More Details
                 </button>
               </div>

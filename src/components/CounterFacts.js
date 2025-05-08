@@ -40,7 +40,7 @@ const CounterFacts = () => {
         <div className="row g-4">
           {counters.map((counter, index) => (
             <div
-              className="col-12 col-sm-6 col-md-6 col-xl-3 wow fadeInUp"
+              className="col-12 col-sm-6 col-md-6 col-lg-3 col-xl-3 wow fadeInUp"
               data-wow-delay={counter.delay}
               key={index}
             >
@@ -64,6 +64,7 @@ const CounterFacts = () => {
             </div>
           ))}
         </div>
+
       </div>
     </div>
   );
