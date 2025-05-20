@@ -1,28 +1,40 @@
-import React, { useEffect, useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { Link } from 'react-scroll';
 import logo from '../assets/img/logo.png';
 import '../styles/main.css';
+import Modal from '../components/Modal';
 
 function Navbar() {
   const [isHamburgerOpen, setIsHamburgerOpen] = useState(false);
   const [isDropdownOpen, setIsDropdownOpen] = useState(false);
   const [activeSection, setActiveSection] = useState('home');
+  const [isModalOpen, setIsModalOpen] = useState(false);
 
   const toggleHamburger = () => setIsHamburgerOpen(!isHamburgerOpen);
   const toggleDropdown = () => setIsDropdownOpen(!isDropdownOpen);
+  const openModal = () => setIsModalOpen(true);
+  const closeModal = () => setIsModalOpen(false);
 
+  // Function to update active section based on scroll
   useEffect(() => {
-    const sections = ['home', 'about', 'counter', 'services', 'features', 'countries', 'testimonial'];
     const handleScroll = () => {
+      const sections = ['home', 'about', 'services', 'features', 'countries', 'testimonial'];
       let current = 'home';
-      sections.forEach((id) => {
-        const section = document.getElementById(id);
-        if (section && section.offsetTop - 100 <= window.scrollY) {
-          current = id;
+
+      for (let id of sections) {
+        const el = document.getElementById(id);
+        if (el) {
+          const rect = el.getBoundingClientRect();
+          if (rect.top <= 100 && rect.bottom >= 100) {
+            current = id;
+            break;
+          }
         }
-      });
+      }
+
       setActiveSection(current);
     };
+
     window.addEventListener('scroll', handleScroll);
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
@@ -49,9 +61,15 @@ function Navbar() {
             </div>
           </div>
           <Link to="testimonial" smooth duration={500} className={`nav-link ${activeSection === 'testimonial' ? 'active' : ''}`}>Contact</Link>
-          <button className="quote-btn">Get A Quote</button>
+
+          <button className="quote-btn" onClick={openModal}>
+            Get A Quote
+          </button>
         </div>
       </nav>
+
+      {/* Modal */}
+      {isModalOpen && <Modal closeModal={closeModal} />}
     </div>
   );
 }

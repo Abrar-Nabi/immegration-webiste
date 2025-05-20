@@ -34,14 +34,14 @@
     justify-content: center;
     gap: 20px;
   }
-  
   .country-card {
     position: relative;
     width: 260px;
-    overflow: visible; /* ✅ allow flag to overflow above */
+    overflow: visible;
     border-radius: 12px;
     transition: transform 0.3s ease;
-  }
+    margin-bottom: 40px;
+}
   
   .country-card:hover .country-image {
     transition: 0.5s;

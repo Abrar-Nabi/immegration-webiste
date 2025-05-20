@@ -4,42 +4,35 @@ import { Navigation, Autoplay } from 'swiper/modules';
 import 'swiper/css';
 import 'swiper/css/navigation';
 import '../styles/Testimonial.css';
-import img1 from '../assets/img/testimonial-1.jpg';
-import img2 from '../assets/img/testimonial-2.jpg';
-import img3 from '../assets/img/testimonial-3.jpg';
+import img1 from '../assets/img/testimonial-1.jpeg';
+import img2 from '../assets/img/testimonial-2.jpeg';
+
+const defaultUserIcon = 'https://cdn-icons-png.flaticon.com/512/149/149071.png';
 const testimonials = [
-    {
-      name: 'Person One',
-      profession: 'Designer',
-      image: img1,
-      text: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit...',
-    },
-    {
-      name: 'Person Two',
-      profession: 'Developer',
-      image: img2,
-      text: 'Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua...',
-    },
-    {
-      name: 'Person Three',
-      profession: 'Manager',
-      image: img3,
-      text: 'Ut enim ad minim veniam, quis nostrud exercitation...',
-    },
-    {
-      name: 'Person Four',
-      profession: 'Writer',
-      image: img1,
-      text: 'Aliquip ex ea commodo consequat. Duis aute irure dolor...',
-    },
-    {
-      name: 'Person Five',
-      profession: 'Artist',
-      image: img2,
-      text: 'Velit esse cillum dolore eu fugiat nulla pariatur...',
-    }
-  ];
-  
+  {
+    name: 'Akashdeep Singh',
+    profession: '',
+    image: img1,
+    text: 'All the Executives are very helpful throughout my process. The entire staff is welcoming. Special thanks to the Counsellors.',
+  },
+  {
+    name: 'Tajinder Singh',
+    profession: '',
+    image: img2,
+    text: 'It was a Pleasant experience to have assistance from your end. My application was processed without any Problems, received my Canada Visitor Visa. Thank you The Consultants team.',
+  },
+  {
+    name: 'Rahul Kumar',
+    profession: '',
+    image: null, // No image, will fall back to default icon
+    text: 'Each and everything is very well explained, which is required for a student visa. All the team is helpful and organised.',
+  },
+];
+
+
+
+
+
 
 const TestimonialSlider = () => {
   return (
@@ -47,7 +40,7 @@ const TestimonialSlider = () => {
       <div className="testimonial-header">
         <h5 className="testimonial-subtitle">OUR CLIENTS REVIEWS</h5>
         <h1 className="testimonial-title">What Our Clients Say</h1>
-        <p className="testimonial-description">Lorem ipsum dolor sit amet consectetur adipisicing elit...</p>
+
       </div>
       <Swiper
         modules={[Navigation, Autoplay]}
@@ -73,7 +66,12 @@ const TestimonialSlider = () => {
                 ))}
               </div>
               <div className="testimonial-user">
-                <img src={item.image} alt="testimonial" className="user-img" />
+                <img
+                  src={item.image || defaultUserIcon}
+                  alt="testimonial"
+                  className="user-img"
+                />
+
                 <div className="user-info">
                   <h5>{item.name}</h5>
                   <p>{item.profession}</p>

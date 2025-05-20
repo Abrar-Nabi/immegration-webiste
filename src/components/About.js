@@ -22,9 +22,11 @@ const About = () => {
                         </div>
 
                         <p className="about-desc">
-                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Sunt architecto consectetur iusto perferendis
-                            blanditiis assumenda dignissimos, commodi fuga culpa earum explicabo libero sint est mollitia saepe! Sequi
-                            asperiores rerum nemo!
+                        We are a trusted immigration consultancy with years of experience helping individuals and families navigate complex immigration laws. 
+                        At THE CONSULTANTS, we understand that immigration isn’t just paperwork — it’s personal — and we treat it that way. Our expert team offers personalized
+                         advice and comprehensive support for all visa applications, from work permits to permanent residency. From consultancy to bespoke relocation plans, 
+                         we provide tailored strategies that align with your goals, all managed with utmost professionalism and confidentiality.
+                         Whether you're aiming to study, work, or settle abroad, we’re here to make your journey as smooth and successful as possible.
                         </p>
 
                         <div className="about-icons-row">
@@ -58,7 +60,7 @@ const About = () => {
                                     </div>
                                     <div className="contact-text">
                                         <span className="small-text">Have any questions?</span>
-                                        <span className="phone-number">Free: +0123 456 7890</span>
+                                        <span className="phone-number">+91 9991970404</span>
                                     </div>
                                 </div>
                             </div>

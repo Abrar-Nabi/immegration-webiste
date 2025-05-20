@@ -71,11 +71,36 @@
 }
 
 .hero-button{
-    background-color: #b08e40 !important;
+    background: #d2b775 !important;
 }
 .hero-button:hover{
-    background-color: #866c32!important;
+    background: #b08e40 !important;
 }
+
+  /* Responsive Design */
+  @media (max-width: 768px) {
+    .modal-container {
+      width: 95%;
+      padding: 1.5rem;
+    }
+  
+    .modal-close-btn {
+      font-size: 24px;
+      top: 8px;
+      right: 12px;
+    }
+  
+    .modal-container h3 {
+      font-size: 20px;
+    }
+  
+    .modal-container button,
+    .modal-container input,
+    .modal-container textarea {
+      font-size: 15px;
+    }
+  }
+  
 @media (max-width: 768px) {
     .carousel-header {
         height: 700px !important;
@@ -97,5 +122,10 @@
     .carousel-header .carousel .carousel-indicators {
         padding: 0;
     }
+
+    .carousel-header .carousel-control-prev .carousel-control-prev-icon,
+.carousel-header .carousel-control-next .carousel-control-next-icon {
+    display: none;
+}
 }
 /*** Carousel Hero Header End ***/

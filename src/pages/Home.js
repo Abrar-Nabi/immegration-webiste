@@ -8,6 +8,7 @@ import Features from '../components/Features';
 import CountriesWeOffer from '../components/CountriesWeOffer';
 import Testimonial from '../components/Testimonial';
 import Footer from './Footer';
+import PartnerWithUs from '../components/PartnerWithUs';
 
 
 function Home() {
@@ -23,7 +24,9 @@ function Home() {
 <div id="features"><Features /></div>
 <div id="countries"><CountriesWeOffer /></div>
 <div id="testimonial"><Testimonial /></div>
-<Footer />
+<div id=""><PartnerWithUs/></div>
+<div id=""><Footer /></div>
+
 
     </>
   );

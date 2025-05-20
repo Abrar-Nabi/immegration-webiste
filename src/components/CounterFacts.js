@@ -13,15 +13,15 @@ const counters = [
   {
     icon: <FaUsers />,
     title: 'Team Members',
-    value: 377,
+    value: 7,
     suffix: '+',
     delay: '0.3s',
   },
   {
     icon: <FaUserCheck />,
     title: 'Visa Process',
-    value: 4.9,
-    suffix: 'K',
+    value: 50,
+    suffix: '+',
     delay: '0.5s',
   },
   {

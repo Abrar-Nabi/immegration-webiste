@@ -5,22 +5,22 @@ const featureData = [
   {
     icon: "fas fa-dollar-sign",
     title: "Cost-Effective",
-    description: "Dolor, sit amet consectetur adipisicing elit. Soluta inventore cum accusamus,",
+    description: "We offer affordable, high-quality services ensuring a smooth, budget-friendly process,",
   },
   {
     icon: "fab fa-cc-visa",
     title: "Visa Assistance",
-    description: "Dolor, sit amet consectetur adipisicing elit. Soluta inventore cum accusamus,",
+    description: "Expert visa guidance to help you navigate the application process with ease.",
   },
   {
     icon: "fas fa-atlas",
     title: "Faster Processing",
-    description: "Dolor, sit amet consectetur adipisicing elit. Soluta inventore cum accusamus,",
+    description: "Experience quicker processing times, so you can focus on your future without unnecessary delays.",
   },
   {
     icon: "fas fa-users",
     title: "Direct Interviews",
-    description: "Dolor, sit amet consectetur adipisicing elit. Soluta inventore cum accusamus,",
+    description: "We connect you directly with employers, ensuring a seamless interview process and a higher chance of success.",
   },
 ];
 
@@ -36,10 +36,8 @@ const Features = () => {
             Offer Tailor Made Services That Our Client Requires
           </h1>
           <p className="description">
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Quaerat
-            deleniti amet at atque sequi quibusdam cumque itaque repudiandae
-            temporibus, eius nam mollitia voluptas maxime veniam necessitatibus
-            saepe in ab? Repellat!
+          We provide customized immigration services tailored to your needs, ensuring a seamless experience.
+           Our expert team is dedicated to guiding you through every step of the immigration process.
           </p>
         </div>
         <div className="features-grid">
