@@ -6,10 +6,10 @@ function Topbar() {
     <div className="topbar">
       <div className="topbar-container">
         <div className="topbar-left">
-          <a href="mailto:Example@gmail.com">
+          <a href="mailto:Theconsultantschd@gmail.com">
             <i className="fas fa-envelope"></i> Theconsultantschd@gmail.com
           </a>
-          <a href="tel:+01234567890">
+          <a href="tel:+91 9991970404">
             <i className="fas fa-phone-alt"></i> +91 9991970404
           </a>
         </div>

@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect, useRef } from 'react';
 import "../styles/Services.css";
 import service1Image from '../assets/img/service-1.jpg';
 import service2Image from '../assets/img/service-2.jpg';
@@ -7,9 +7,9 @@ import service4Image from '../assets/img/service-4.jpg';
 import service5Image from '../assets/img/service-5.jpg';
 import service6Image from '../assets/img/service-6.jpg';
 
-const VisaCard = ({ title, imgSrc, description }) => {
+const VisaCard = React.forwardRef(({ title, imgSrc, description, animateClass }, ref) => {
     return (
-        <div className="visa-card">
+        <div ref={ref} className={`visa-card ${animateClass ? 'animate' : ''}`}>
             <div className="visa-box">
                 <div className="visa-img-box">
                     <img src={imgSrc} className="visa-img" alt={title} />
@@ -30,7 +30,7 @@ const VisaCard = ({ title, imgSrc, description }) => {
             </div>
         </div>
     );
-};
+});
 
 const VisaCategories = () => {
     const services = [
@@ -40,8 +40,37 @@ const VisaCategories = () => {
         { title: 'Work Permits / Visa PR', imgSrc: service4Image, description: 'Work permits or Permanent Residency (PR) visas allow individuals to live and work in a foreign country on a long-term basis. We provide expert assistance in obtaining work permits or PR visas, ensuring your transition is seamless and legally compliant.' },
         { title: 'Dependent Visa', imgSrc: service5Image, description: 'A dependent visa allows family members, such as spouses or children, to join the primary visa holder in a foreign country. Our team guides you through the process, ensuring that your loved ones can accompany you without any hassle.' },
         { title: 'School Visa', imgSrc: service6Image, description: 'A school visa is designed for individuals who wish to attend an educational institution in a foreign country. We assist students in securing the necessary documents and permissions to study abroad, making their academic journey smooth and hassle-free.' }
-        
     ];
+
+    const cardRefs = useRef([]);
+
+    useEffect(() => {
+        const observer = new IntersectionObserver(
+            entries => {
+                entries.forEach(entry => {
+                    const target = entry.target;
+                    if (entry.isIntersecting) {
+                        target.classList.add('animate');
+                    } else {
+                        target.classList.remove('animate');
+                    }
+                });
+            },
+            {
+                threshold: 0.1
+            }
+        );
+
+        cardRefs.current.forEach(card => {
+            if (card) observer.observe(card);
+        });
+
+        return () => {
+            cardRefs.current.forEach(card => {
+                if (card) observer.unobserve(card);
+            });
+        };
+    }, []);
 
     return (
         <div className="visa-section">
@@ -49,12 +78,13 @@ const VisaCategories = () => {
                 <div className="visa-header">
                     <h5 className="visa-subtitle">Visa Categories</h5>
                     <h1 className="visa-main-title">Enabling Your Immigration Successfully</h1>
-                    <p className="visa-intro">Lorem ipsum dolor sit amet consectetur...</p>
+          
                 </div>
                 <div className="visa-grid">
                     {services.map((service, index) => (
                         <VisaCard
                             key={index}
+                            ref={el => cardRefs.current[index] = el}
                             title={service.title}
                             imgSrc={service.imgSrc}
                             description={service.description}

@@ -138,6 +138,31 @@
     background-color: #0056b3;
   }
   
+  /* Initial state: hidden and translated down */
+.feature-card {
+  background: #fff;
+  padding: 30px 20px;
+  border-radius: 10px;
+  width: 260px;
+  box-shadow: 0 0 45px rgba(0, 0, 0, 0.1);
+  position: relative;
+  transition: 0.5s ease;
+  overflow: hidden;
+
+  opacity: 0;
+  transform: translateY(40px);
+  will-change: transform, opacity;
+}
+
+/* Animate class: visible and slide up */
+.feature-card.animate {
+  opacity: 1;
+  transform: translateY(0);
+  transition: transform 0.6s ease-out, opacity 0.6s ease-out;
+}
+
+/* Keep your existing hover styles and responsiveness as-is */
+
   /* Responsive */
   @media (max-width: 768px) {
     .features-grid {

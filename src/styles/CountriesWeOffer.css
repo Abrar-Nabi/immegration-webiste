@@ -141,3 +141,16 @@
     background-color: #00538f;
   }
   
+  /* Start with invisible and shifted down */
+.country-card {
+  opacity: 0;
+  transform: translateY(40px);
+  transition: transform 0.6s ease-out, opacity 0.6s ease-out;
+  /* keep your existing styles */
+}
+
+/* Animate class: visible and slide up */
+.country-card.animate {
+  opacity: 1;
+  transform: translateY(0);
+}

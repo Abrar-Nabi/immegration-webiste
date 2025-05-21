@@ -1,150 +1,244 @@
 .about-section {
     padding: 5rem 0;
     background-color: #fff;
-  }
-  
-  .about-container {
+}
+
+.about-container {
     max-width: 1200px;
     margin: auto;
     padding: 0 1rem;
-  }
-  
-  .about-row {
+}
+
+.about-row {
     display: flex;
     flex-wrap: wrap;
     gap: 2rem;
-  }
-  
-  .about-left {
+}
+
+.about-left {
     flex: 1 1 40%;
-  }
-  
-  .about-right {
+}
+
+.about-right {
     flex: 1 1 55%;
-  }
-  
-  .about-images .img1 {
+}
+
+.about-images .img1 {
     width: 100%;
     border-radius: 8px 8px 0 0;
     margin-bottom: -7px;
-  }
-  
-  .about-images .img2 {
+}
+
+.about-images .img2 {
     width: 100%;
     border-radius: 300px 300px 0 0;
     border-bottom: 5px solid #0d6efd;
-  }
-  
-  .sub-title {
+}
+
+.sub-title {
     color: #666;
     font-size: 1rem;
     padding-right: 1rem;
-  }
-  
-  .main-title {
+}
+
+.main-title {
     font-size: 2.5rem;
     margin-bottom: 1.5rem;
-
     font-weight: 700;
     line-height: 1.2;
-  }
-  
-  .about-desc {
+}
+
+.about-desc {
     margin-bottom: 2rem;
-  }
-  
-  .about-icons-row {
+}
+
+.about-icons-row {
     display: flex;
     flex-wrap: wrap;
     gap: 2rem;
     margin-bottom: 2rem;
-  }
-  
-  .icon-box {
+}
+
+.icon-box {
     display: flex;
     align-items: center;
     gap: 1rem;
     flex: 1 1 45%;
-  }
-  
-  .icon {
+}
+
+.icon {
     font-size: 2.5rem;
     color: #6c757d;
-  }
-  
-  .experience-row {
+}
+
+.experience-row {
     display: flex;
     flex-wrap: wrap;
     gap: 2rem;
     margin-bottom: 2rem;
-  }
-  
-  .experience-box {
+}
+
+.experience-box {
     background-color: #f8f9fa;
     text-align: center;
     border-radius: 10px;
+    padding: 1rem 2rem;
+    flex: 1 1 25%;
+}
 
-
-  }
-  
-  .experience-box .exp-icon {
+.experience-box .exp-icon {
     font-size: 3rem;
     color: #b08e40;
     margin-bottom: 0.5rem;
-  }
-  
-  .experience-text {
+}
+
+.experience-text {
     flex: 1 1 70%;
-  }
-  
-  .experience-text p {
+}
+
+.experience-text p {
     color: #b08e40;
     font-weight: 600;
     margin-bottom: 0.8rem;
-  }
-  
-  .experience-text i {
+}
+
+.experience-text i {
     color: #6c757d;
     margin-right: 0.5rem;
-  }
-  
-  .contact-row {
+}
+
+.contact-row {
     display: flex;
     align-items: center;
     gap: 1rem;
     flex-wrap: wrap;
-  }
-  
-  .contact-icon {
+}
+
+.contact-icon {
     position: relative;
-  }
-  
-  .phone-icon {
+}
+
+.phone-icon {
     font-size: 2.5rem;
-   
-  }
-  
-  .comment-bubble {
+}
+
+.comment-bubble {
     position: absolute;
     top: 0;
     left: 30px;
-  }
-  
-  .comment-bubble i {
+}
+
+.comment-bubble i {
     color: #6c757d;
-  }
-  
-  .contact-text .small-text {
+}
+
+.contact-text .small-text {
     color: #b08e40;
-  }
-  
-  .phone-number {
+}
+
+.phone-number {
     font-size: 1.2rem;
     font-weight: bold;
     color: #6c757d;
     letter-spacing: 2px;
-  }
+}
 
-  .contact-text{
+.contact-text {
     display: grid;
+}
+
+/* === ANIMATIONS === */
+
+/* Initial hidden state for animation elements */
+/* When animate class is removed, these reset */
+.about-left.about-images img,
+.about-right > * {
+  opacity: 0;
+  transform: translateY(40px);
+  transition: none;
+}
+
+.icon,
+.exp-icon,
+.phone-icon,
+.fa-check-circle {
+  opacity: 0;
+  transform: scale(0.5);
+  transition: none;
+}
+
+/* Animate images when .animate is added */
+.about-left.about-images.animate img.img1 {
+  animation: fadeSlideUp 0.8s ease forwards;
+  animation-delay: 0.2s;
+}
+
+.about-left.about-images.animate img.img2 {
+  animation: fadeSlideUp 0.8s ease forwards;
+  animation-delay: 0.4s;
+}
+
+/* Animate right side children with stagger when .animate added */
+.about-right.animate > .section-title {
+  animation: fadeSlideUp 0.8s ease forwards;
+  animation-delay: 0.6s;
+}
+
+.about-right.animate > .about-desc {
+  animation: fadeSlideUp 0.8s ease forwards;
+  animation-delay: 0.8s;
+}
+
+.about-right.animate > .about-icons-row {
+  animation: fadeSlideUp 0.8s ease forwards;
+  animation-delay: 1.0s;
+}
+
+.about-right.animate > .experience-row {
+  animation: fadeSlideUp 0.8s ease forwards;
+  animation-delay: 1.2s;
+}
+
+/* Icon scale + fade-in animations when .animate added */
+.about-left.about-images.animate .icon,
+.about-right.animate .icon,
+.about-right.animate .exp-icon,
+.about-right.animate .phone-icon,
+.about-right.animate .fa-check-circle {
+  animation: iconScale 0.6s ease forwards;
+  opacity: 0; /* start hidden */
+}
+
+.about-left.about-images.animate .icon {
+  animation-delay: 1.4s;
+}
+
+.about-right.animate .exp-icon {
+  animation-delay: 1.6s;
+}
+
+
+
+/* Keyframes */
+
+@keyframes fadeSlideUp {
+  0% {
+    opacity: 0;
+    transform: translateY(40px);
   }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes iconScale {
+  0% {
+    opacity: 0;
+    transform: scale(0.5);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+}

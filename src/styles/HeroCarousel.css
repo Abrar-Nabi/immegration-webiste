@@ -1,3 +1,33 @@
+.carousel-content{
+    max-width: 900px;
+        padding: 1.5rem !important;
+
+}
+
+.carousel-description {
+    font-size: 1.5rem;
+  text-transform: capitalize !important;
+    font-family: "Poppins",sans-serif;
+    margin-bottom: 1.5rem ;
+}
+
+.carousel-subheading{
+    font-size: 1.5rem;
+    font-weight: 700 ;
+    line-height: 1.2;
+    text-transform: capitalize !important;
+       margin-bottom: 1.5rem ;
+}
+
+.carousel-heading{
+font-size: calc(1.625rem + 4.5vw);
+    font-weight: 700;
+    text-transform: capitalize !important;
+    line-height: 1.2;
+       margin-bottom: 1.5rem ;
+}
+
+
 
 /*** Carousel Hero Header Start ***/
 .carousel-header .carousel-control-prev .carousel-control-prev-icon,
@@ -76,6 +106,42 @@
 .hero-button:hover{
     background: #b08e40 !important;
 }
+/* Initial state */
+.animate-item {
+  opacity: 0;
+  transform: translateY(50px);
+}
+
+/* When the carousel is visible, apply animation */
+.carousel.slide.animate .animate-item {
+  animation: fadeInUp 1s ease-out forwards;
+}
+
+/* Stagger animation using nth-child */
+.carousel.slide.animate .animate-item:nth-child(1) {
+  animation-delay: 0.2s;
+}
+.carousel.slide.animate .animate-item:nth-child(2) {
+  animation-delay: 0.4s;
+}
+.carousel.slide.animate .animate-item:nth-child(3) {
+  animation-delay: 0.6s;
+}
+.carousel.slide.animate .animate-item:nth-child(4) {
+  animation-delay: 0.8s;
+}
+
+/* Keyframes */
+@keyframes fadeInUp {
+  0% {
+    opacity: 0;
+    transform: translateY(50px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
 
   /* Responsive Design */
   @media (max-width: 768px) {
@@ -128,4 +194,5 @@
     display: none;
 }
 }
-/*** Carousel Hero Header End ***/
+
+

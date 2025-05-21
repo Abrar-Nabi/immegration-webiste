@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect, useRef } from "react";
 import "../styles/CountriesWeOffer.css";
 import country1 from "../assets/img/country-1.jpg";
 import country2 from "../assets/img/country-2.jpg";
@@ -23,21 +23,59 @@ const countries = [
 ];
 
 const CountriesWeOffer = () => {
+  const cardRefs = useRef([]);
+
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add("animate");
+          } else {
+            entry.target.classList.remove("animate");
+          }
+        });
+      },
+      { threshold: 0.1 }
+    );
+
+    cardRefs.current.forEach((card) => {
+      if (card) observer.observe(card);
+    });
+
+    return () => {
+      cardRefs.current.forEach((card) => {
+        if (card) observer.unobserve(card);
+      });
+    };
+  }, []);
+
   return (
     <section className="country-section">
       <div className="country-header">
         <h5 className="subtitle">Countries We Offer</h5>
-        <h1 className="title">Immigration & Visa Services For These Countries</h1>
+        <h1 className="title">
+          Immigration & Visa Services For These Countries
+        </h1>
         <p className="description">
-          Discover comprehensive immigration services tailored for your needs. We ensure professional guidance through every step of your journey.
+          Discover comprehensive immigration services tailored for your needs.
+          We ensure professional guidance through every step of your journey.
         </p>
       </div>
 
       <div className="country-grid">
         {countries.map((country, index) => (
-          <div className="country-card" key={index}>
+          <div
+            className="country-card"
+            key={index}
+            ref={(el) => (cardRefs.current[index] = el)}
+          >
             <div className="country-image-wrapper">
-              <img src={country.image} alt={country.name} className="country-image" />
+              <img
+                src={country.image}
+                alt={country.name}
+                className="country-image"
+              />
               <div className="country-overlay" />
               <div className="country-flag">
                 <img src={country.flag} alt={`${country.name} Flag`} />
@@ -49,8 +87,6 @@ const CountriesWeOffer = () => {
           </div>
         ))}
       </div>
-
-    
     </section>
   );
 };
