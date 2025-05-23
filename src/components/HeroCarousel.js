@@ -51,7 +51,6 @@ const HeroCarousel = () => {
               <div className={`carousel-item ${index === 0 ? 'active' : ''}`} key={index}>
                 <img src={img} className="img-fluid" alt={`Slide ${index + 1}`} />
                 <div className="carousel-caption">
-            
                   <div className="carousel-content">
                     <h4 className="carousel-subheading animate-item">Solution For All Type Of Visas</h4>
                     <h1 className="carousel-heading animate-item">{
@@ -64,11 +63,13 @@ const HeroCarousel = () => {
                         ? 'Explore visa options and immigration services tailored just for you!'
                         : 'Begin your smooth journey abroad with trusted immigration experts!'
                     }</p>
-                    <button className="hero-button btn btn-primary border-secondary rounded-pill text-white py-3 px-5 animate-item">
+                    <button
+                      onClick={openModal}
+                      className="hero-button btn btn-primary border-secondary rounded-pill text-white py-3 px-5 animate-item"
+                    >
                       Get a quote
                     </button>
                   </div>
-
                 </div>
               </div>
             ))}
