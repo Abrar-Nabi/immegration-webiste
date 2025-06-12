@@ -29,14 +29,14 @@
     margin-bottom: 20px;
   }
   
-  .footer-item a {
+  .footer-item h6 {
     color: #fff;
     margin: 5px 0;
     text-decoration: none;
     transition: 0.3s;
   }
   
-  .footer-item a:hover {
+  .footer-item h6:hover {
    
     color: #b08e40;
   }

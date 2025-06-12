@@ -12,7 +12,7 @@ const Modal = ({ closeModal }) => {
     setIsSending(true);
 
     emailjs.sendForm(
-      'service_izvjzsr',
+      'service_4kcyyfb',
       'template_dai8iak',
       form.current,
       'jlZMDzKYLKFJ9SwUH'

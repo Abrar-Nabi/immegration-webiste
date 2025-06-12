@@ -5,7 +5,7 @@ import { FaPassport, FaUsers, FaUserCheck, FaHandshake } from 'react-icons/fa';
 import '../styles/CounterFacts.css';
 
 const counters = [
-  { icon: <FaPassport />, title: 'Visa Categories', value: 31, suffix: '+', delay: '0.1s' },
+  { icon: <FaPassport />, title: 'Visa Categories', value: 6, suffix: '+', delay: '0.1s' },
   { icon: <FaUsers />, title: 'Team Members', value: 7, suffix: '+', delay: '0.3s' },
   { icon: <FaUserCheck />, title: 'Visa Process', value: 50, suffix: '+', delay: '0.5s' },
   { icon: <FaHandshake />, title: 'Success Rates', value: 98, suffix: '%', delay: '0.7s' },

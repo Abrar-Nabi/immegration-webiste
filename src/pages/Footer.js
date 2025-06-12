@@ -93,12 +93,12 @@ const Footer = () => {
             <div className="footer-col">
               <div className="footer-item">
                 <h4 className="footer-heading">Our Services</h4>
-                <a href="#"><i className="fas fa-angle-right"></i> Job Visa</a>
-                <a href="#"><i className="fas fa-angle-right"></i> Study Visa</a>
-                <a href="#"><i className="fas fa-angle-right"></i> Tourist / Visitor Visa</a>
-                <a href="#"><i className="fas fa-angle-right"></i> Work Permits / Visa PR</a>
-                <a href="#"><i className="fas fa-angle-right"></i> Dependent Visa</a>
-                <a href="#"><i className="fas fa-angle-right"></i> School Visa</a>
+                <h6><i className="fas fa-angle-right"></i> Job Visa</h6>
+                <h6><i className="fas fa-angle-right"></i> Study Visa</h6>
+                <h6><i className="fas fa-angle-right"></i> Tourist / Visitor Visa</h6>
+                <h6><i className="fas fa-angle-right"></i> Work Permits / Visa PR</h6>
+                <h6><i className="fas fa-angle-right"></i> Dependent Visa</h6>
+                <h6><i className="fas fa-angle-right"></i> School Visa</h6>
               </div>
             </div>
 

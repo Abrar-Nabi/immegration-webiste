@@ -60,7 +60,7 @@ function Navbar() {
               <Link to="testimonial" smooth duration={500} className={`dropdown-item nav-link ${activeSection === 'testimonial' ? 'active' : ''}`}>Testimonial</Link>
             </div>
           </div>
-          <Link to="testimonial" smooth duration={500} className={`nav-link ${activeSection === 'testimonial' ? 'active' : ''}`}>Contact</Link>
+          <Link to="footer" smooth duration={500} className={`nav-link ${activeSection === 'footer' ? 'active' : ''}`}>Contact</Link>
 
           <button className="quote-btn" onClick={openModal}>
             Get A Quote

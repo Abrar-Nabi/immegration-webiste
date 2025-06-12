@@ -59,7 +59,7 @@ const About = () => {
             <div className="experience-row">
               <div className="experience-box">
                 <i className="fas fa-ticket-alt exp-icon"></i>
-                <h1>34</h1>
+                <h1>4</h1>
                 <p>Years of Experience</p>
               </div>
               <div className="experience-text">
